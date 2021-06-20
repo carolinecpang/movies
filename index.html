@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Movie Search</title>
+        <link rel="stylesheet" href="style.css"/>
     </head>
+
     <body>
-        <h1>
-            Hello World!
-        </h1>
+        <div class="toppage">
+            <div class="description">
+                <div class="header">
+                    Information on thousands of movies with a simple search.
+                </div>
+                <div class="details">
+                    Discover release dates, directors, runtimes, genres, and more.
+                    <br>Get started by entering any movie title into the search bar below.
+                </div>
+            </div>
+            <div class="search-container">
+                <form action="search_action.php">
+                    <input type="text" placeholder="Title..." name="search">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </div>
     </body>
 </html>
+

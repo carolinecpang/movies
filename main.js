@@ -1,5 +1,5 @@
 function searchAPI(title) {
-    apiUrl = `http://www.omdbapi.com/?apikey=d1d8c182&s=${title}&type=movie`
+    apiUrl = `https://www.omdbapi.com/?apikey=d1d8c182&s=${title}&type=movie`
     console.log(apiUrl)
     fetch(apiUrl)
         .then((data) => data.json())

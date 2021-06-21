@@ -82,6 +82,7 @@ body {
 .movieResult {
     background-color: var(--movie-background);
     padding: 5px;
+    margin:5px;
 }
 
 
@@ -97,14 +98,20 @@ body {
     color: var(--movie-sub-text);
 }
 
-
 .movieResult button {
     padding: 3px;
     font-size: 14px;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+    background-color:rgb(218, 218, 230);
 }
 
+.movieResult button:hover {
+    background-color:rgb(178, 178, 189);
+}
+
+/* Adapted from https://www.w3schools.com/howto/howto_css_modals.asp */
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */

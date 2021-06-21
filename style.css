@@ -127,6 +127,7 @@ body {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    border-radius:5px;
 }
   
 /* The Close Button */
@@ -157,4 +158,12 @@ body {
 
 .modal-content .details-director {
     font-size: 14px;
+}
+
+/* Stylizing Error */
+.error {
+    padding: 10px;
+    font-size: 18px;
+    color: var(--movie-text);
+    font-weight: bold;
 }

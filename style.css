@@ -3,6 +3,9 @@
     --header-background: rgb(56, 54, 68);
     --title-text: rgb(255, 209, 124);
     --sub-text: rgb(253, 219, 155);
+
+    --movie-background: rgb(41, 39, 54);
+    --movie-text: rgb(253, 219, 155);
   }
 
 body {
@@ -64,4 +67,22 @@ body {
     font-size: 18px;
     font-style: italic;
     color: var(--sub-text);
+}
+
+.movieResult {
+    background-color: var(--movie-background);
+    padding: 5px;
+}
+
+
+
+.movieResult .movieTitle {
+    font-size: 18px;
+    color: var(--movie-text);
+    font-weight: bold;
+}
+
+.movieResult .movieDirector {
+    font-size: 12px;
+    color: var(--movie-text);
 }

@@ -9,48 +9,23 @@ function searchAPI(title) {
             console.log(data)
             console.log(data.Search[0])
             // console.log(data.Title)
-            newHtml = ''
+            newHtml = `<div class="numResults">Displaying 10 of ${data.Search.length} results</div>`
             for (let i = 0; i < data.Search.length; i++){
                 newHtml += `
                 <div class="movieResult">
                     <div class="movieTitle">${data.Search[i].Title}</div>
                     <div class="movieDirector">${data.Search[i].Year}</div>
-                    
-                    <button id="movieButton">Learn More</button>
+
+                    <button id="movieButton" onclick="openModal()">Learn More</button>
                     <div id="movieModal" class="modal">
-                        <div class="movieContent">
-                            <span class="close">&times;</span>
-                            <span class="director">${data.Search[i].Director}</span>
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <div class="details-title">${data.Search[i].Title}</div>
+                            <div class="details-year">Released: ${data.Search[i].Year}</div>
+                            <div class="details-director">Directior: ${data.Search[i].Director}</div>
                         </div>
                     </div>
                 </div>
-                <script type="text/javascript">
-                    // Get the modal
-                    var modal = document.getElementById("movieModal");
-
-                    // Get the button that opens the modal
-                    var btn = document.getElementById("movieButton");
-
-                    // Get the <span> element that closes the modal
-                    var span = document.getElementsByClassName("close")[0];
-
-                    // When the user clicks on the button, open the modal
-                    btn.onclick = function() {
-                    modal.style.display = "block";
-                    }
-
-                    // When the user clicks on <span> (x), close the modal
-                    span.onclick = function() {
-                    modal.style.display = "none";
-                    }
-
-                    // When the user clicks anywhere outside of the modal, close it
-                    window.onclick = function(event) {
-                        if (event.target == modal) {
-                            modal.style.display = "none";
-                        }
-                    }
-                </script>
             `
             }
             const resultsDiv = document.querySelector(".results")
@@ -58,3 +33,10 @@ function searchAPI(title) {
         }
 }
 
+function openModal() {
+    document.getElementById("movieModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("movieModal").style.display = "none";
+}

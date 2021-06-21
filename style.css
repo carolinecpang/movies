@@ -73,6 +73,12 @@ body {
 }
 
 /* Styling Movie Results */
+.numResults {
+    color: seashell;
+    font-size: 12px;
+    padding: 5px;
+}
+
 .movieResult {
     background-color: var(--movie-background);
     padding: 5px;
@@ -89,6 +95,14 @@ body {
     font-size: 12px;
     font-style: italic;
     color: var(--movie-sub-text);
+}
+
+
+.movieResult button {
+    padding: 3px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
 }
 
 /* The Modal (background) */
@@ -109,18 +123,19 @@ body {
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 20% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
 }
   
 /* The Close Button */
 .close {
-    color: #aaa;
+    color: rgb(241, 159, 53);
     float: right;
     font-size: 28px;
     font-weight: bold;
+    /* padding: 20px; */
 }
 
 .close:hover,
@@ -128,4 +143,18 @@ body {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+.modal-content .details-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.modal-content .details-year {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.modal-content .details-director {
+    font-size: 14px;
 }
